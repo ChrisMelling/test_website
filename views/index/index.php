@@ -1,9 +1,8 @@
 
-
-
-
 <div class="body">
+    
     <?php
+    
     if (!empty($this->text)) {
         foreach ($this->text as $article) {
             ?>
@@ -16,5 +15,6 @@
     } else {
         ?> <span> <?php echo "This shelter has no animals of that type." ?> </span> <?php
     }
+   
     ?>
 </div>

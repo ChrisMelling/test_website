@@ -7,6 +7,7 @@ require 'libs/View.php';
 
 require 'libs/Database.php';
 require 'libs/Session.php';
+require 'libs/Hash.php';
 
 require 'util/Auth.php';
 

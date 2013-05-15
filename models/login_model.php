@@ -11,7 +11,7 @@ class Login_model extends Model {
                 user_name = :login AND user_password = :password");
         $sth->execute(array(
             ':login' => $_POST['username'],
-            ':password' => $_POST['password']
+            ':password' => Hash::generateSha($_POST['password'], HASH_PASSWORD_KEY)
         ));
 
         $count = $sth->rowCount();
