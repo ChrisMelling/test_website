@@ -6,10 +6,9 @@
     if (!empty($this->text)) {
         foreach ($this->text as $article) {
             ?>
-
+            <hr>
             <h1> <?php echo $article['article_name']; ?> </h1>
             <span> <?php echo $article['article_body']; ?> </span> 	
-            <hr>
             <?php
         }
     } else {
