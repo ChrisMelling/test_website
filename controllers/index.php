@@ -7,7 +7,8 @@ class Index extends Controller {
     }
 
     function index() {
-        $this->view->text = $this->model->run();
+        
+        $this->view->set('text', $this->model->run());
         $this->view->render('index/index');
     }
 

@@ -2,9 +2,9 @@
 <div class="body">
     
     <?php
-    
-    if (!empty($this->text)) {
-        foreach ($this->text as $article) {
+    echo $data;
+    if (!empty($text)) {
+        foreach ($text as $article) {
             ?>
             <hr>
             <h1> <?php echo $article['article_name']; ?> </h1>
