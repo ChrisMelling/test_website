@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $(".subject").each(function() {
         var default_value = this.value;
+        
         $(this).focus(function() {
             if (this.value == default_value) {
                 this.value = '';
@@ -12,5 +13,6 @@ $(document).ready(function() {
             }
         });
     });
+
 
 });

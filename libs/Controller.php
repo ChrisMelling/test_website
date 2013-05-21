@@ -17,5 +17,9 @@ class Controller {
             $this->model = new $modelName();
         }         
     }
+    
+    public function redirect($location){
+        header("location: ../{$location}");
+    }
 
 }

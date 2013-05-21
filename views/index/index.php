@@ -2,7 +2,7 @@
 <div class="body">
     
     <?php
-    echo $this->data['james'];
+
     if (!empty($this->data['text'])) {
         foreach ($this->data['text'] as $article) {
             ?>

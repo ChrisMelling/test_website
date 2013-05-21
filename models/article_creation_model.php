@@ -13,7 +13,7 @@ class article_creation_model extends Model {
 
         $spl->execute(array(':article_name' => $_POST['subject'],
             ':article_body' => $_POST['bodytext']));
-        
+
         $count = $spl->rowCount();
         if ($count > 0) {
             return true;
@@ -21,4 +21,20 @@ class article_creation_model extends Model {
             return false;
         }
     }
+
+    public function image_upload($name) {
+        $sql = "INSERT INTO images (image_name) VALUES (:image_name)";
+
+        $spl = $this->db->prepare($sql);
+
+        $spl->execute(array(':image_name' => $name));
+
+        $count = $spl->rowCount();
+        if ($count > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
